@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="utf-8" />
-		<title>Dashboard - Ace Admin</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>图表页面 - 网站管理</title>
 
-		<meta name="description" content="overview &amp; stats" />
+		<meta name="description" content="概述及统计数据" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!--basic styles-->
@@ -21,8 +21,6 @@
 
 		<!--fonts-->
 
-		<link rel="stylesheet" href="http://fonts.useso.com/css?family=Open+Sans:400,300" />
-
 		<!--ace styles-->
 
 		<link rel="stylesheet" href="assets/css/ace.min.css" />
@@ -34,7 +32,7 @@
 		<![endif]-->
 
 		<!--inline styles related to this page-->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	</head>
 
 	<body>
 		<div class="navbar">
@@ -43,21 +41,21 @@
 					<a href="#" class="brand">
 						<small>
 							<i class="icon-leaf"></i>
-							Ace Admin
+							网站管理
 						</small>
 					</a><!--/.brand-->
-
 					<ul class="nav ace-nav pull-right">
+                    <!-- 带任务完成进度用
 						<li class="grey">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="icon-tasks"></i>
 								<span class="badge badge-grey">4</span>
 							</a>
-
+							
 							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
 								<li class="nav-header">
 									<i class="icon-ok"></i>
-									4 Tasks to complete
+									4个任务要完成
 								</li>
 
 								<li>
@@ -120,7 +118,8 @@
 								</li>
 							</ul>
 						</li>
-
+						-->
+                        <!--带消息通知用
 						<li class="purple">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="icon-bell-alt icon-animated-bell"></i>
@@ -130,15 +129,16 @@
 							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-closer">
 								<li class="nav-header">
 									<i class="icon-warning-sign"></i>
-									8 Notifications
+									8 消息通知
 								</li>
-
+                                -->
+								<!-- 带评论功能用  
 								<li>
 									<a href="#">
 										<div class="clearfix">
 											<span class="pull-left">
 												<i class="btn btn-mini no-hover btn-pink icon-comment"></i>
-												New Comments
+												最新评论
 											</span>
 											<span class="pull-right badge badge-info">+12</span>
 										</div>
@@ -151,25 +151,27 @@
 										Bob just signed up as an editor ...
 									</a>
 								</li>
-
+								-->
+                                <!-- 购物网站用
 								<li>
 									<a href="#">
 										<div class="clearfix">
 											<span class="pull-left">
 												<i class="btn btn-mini no-hover btn-success icon-shopping-cart"></i>
-												New Orders
+												最新订单
 											</span>
 											<span class="pull-right badge badge-success">+8</span>
 										</div>
 									</a>
 								</li>
-
+								-->
+                                <!-- 带注册功能用
 								<li>
 									<a href="#">
 										<div class="clearfix">
 											<span class="pull-left">
 												<i class="btn btn-mini no-hover btn-info icon-twitter"></i>
-												Followers
+												最新注册人数
 											</span>
 											<span class="pull-right badge badge-info">+11</span>
 										</div>
@@ -184,7 +186,8 @@
 								</li>
 							</ul>
 						</li>
-
+						-->
+                        <!--带用户留言用
 						<li class="green">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 								<i class="icon-envelope icon-animated-vertical"></i>
@@ -194,7 +197,7 @@
 							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
 								<li class="nav-header">
 									<i class="icon-envelope-alt"></i>
-									5 Messages
+									5 留言信息
 								</li>
 
 								<li>
@@ -256,13 +259,13 @@
 								</li>
 							</ul>
 						</li>
-
+						-->
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
+									<small>欢迎您，</small>
+									管理员
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -297,7 +300,7 @@
 				</div><!--/.container-fluid-->
 			</div><!--/.navbar-inner-->
 		</div>
-
+	
 		<div class="main-container container-fluid">
 			<a class="menu-toggler" id="menu-toggler" href="#">
 				<span class="menu-text"></span>
