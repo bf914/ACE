@@ -337,7 +337,7 @@
 				<ul class="nav nav-list">
 					<li>
 						<a href="admin.html">
-							<i class="icon-dashboard"></i>
+							<i class="icon-tasks"></i>
 							<span class="menu-text">基本信息</span>
 						</a>
 					</li>
@@ -632,13 +632,26 @@
 								，
  因为2所以b，2B龙CMS简单好用的CMS。
 							</div>
+							<div class="alert alert-error">
+										<button type="button" class="close" data-dismiss="alert">
+											<i class="icon-remove"></i>
+										</button>
+
+										<strong>
+											<i class="icon-remove"></i>
+											您的网站已被关闭
+										</strong>
+
+										，我们将保存后台数据一个月，到期后仍未续费，后台数据将彻底删除。
+										<br>
+							</div>
 							<div class="alert alert-warning">
 										<button type="button" class="close" data-dismiss="alert">
 											<i class="icon-remove"></i>
 										</button>
 										<strong>注意!</strong>
 
-										你的网站已欠费，请立即续费。
+										您的网站马上到期，请尽快续费。
 										<br>
 							</div>
 							<div class="space-6"></div>
@@ -732,41 +745,7 @@
 
 									<div class="space-6"></div>
 
-									<div class="infobox infobox-green infobox-small infobox-dark">
-										<div class="infobox-progress">
-											<div class="easy-pie-chart percentage" data-percent="61" data-size="39">
-												<span class="percent">61</span>
-												%
-											</div>
-										</div>
-
-										<div class="infobox-data">
-											<div class="infobox-content">Task</div>
-											<div class="infobox-content">Completion</div>
-										</div>
-									</div>
-
-									<div class="infobox infobox-blue infobox-small infobox-dark">
-										<div class="infobox-chart">
-											<span class="sparkline" data-values="3,4,2,3,4,4,2,2"></span>
-										</div>
-
-										<div class="infobox-data">
-											<div class="infobox-content">Earnings</div>
-											<div class="infobox-content">$32,000</div>
-										</div>
-									</div>
-
-									<div class="infobox infobox-grey infobox-small infobox-dark">
-										<div class="infobox-icon">
-											<i class="icon-download-alt"></i>
-										</div>
-
-										<div class="infobox-data">
-											<div class="infobox-content">Downloads</div>
-											<div class="infobox-content">1,205</div>
-										</div>
-									</div>
+									
 								</div>
 
 								<div class="vspace"></div>
@@ -936,6 +915,8 @@
 
 		<script src="assets/js/fuelux/data/fuelux.tree-sampledata.js"></script>
 		<script src="assets/js/fuelux/fuelux.tree.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script><!--显示柱形图标使用-->
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script><!--显示百分比图标使用-->
 
 		<!--ace scripts-->
 
@@ -967,6 +948,29 @@
 			'selected-icon' : null,
 			'unselected-icon' : null
 		});
+		
+		$('.sparkline').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+					$(this).sparkline('html', {tagValuesAttribute:'data-values', type: 'bar', barColor: barColor , chartRangeMin:$(this).data('min') || 0} );
+		});
+		
+
+		$('.easy-pie-chart.percentage').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+					var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+					var size = parseInt($(this).data('size')) || 50;
+					$(this).easyPieChart({
+						barColor: barColor,
+						trackColor: trackColor,
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: parseInt(size/10),
+						animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+						size: size});
+		});
+
 
 
 
