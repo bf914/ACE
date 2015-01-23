@@ -335,7 +335,7 @@
 				</div><!--#sidebar-shortcuts-->
 
 				<ul class="nav nav-list">
-					<li>
+					<li class="active">
 						<a href="admin.html">
 							<i class="icon-tasks"></i>
 							<span class="menu-text">基本信息</span>
@@ -349,7 +349,7 @@
 						</a>
 					</li>
 
-					<li class="active open">
+					<li>
 						<a href="#" class="dropdown-toggle">
 							<i class="icon-desktop"></i>
 							<span class="menu-text"> UI Elements </span>
@@ -372,7 +372,7 @@
 								</a>
 							</li>
 
-							<li class="active">
+							<li>
 								<a href="treeview.html">
 									<i class="icon-double-angle-right"></i>
 									Treeview
@@ -657,7 +657,36 @@
 							<div class="space-6"></div>
 
 							<div class="row-fluid">
-								<div class="span7 infobox-container">
+								<div class="span7 widget-container-span infobox-container ui-sortable">
+								<div class="widget-box collapsed" style="opacity: 1; z-index: 0;">
+								<div class="widget-header widget-header-small header-color-orange">
+								
+											<h6>
+												<i class="icon-sort"></i>
+												Small Header &amp; Collapsed
+											</h6>
+
+											<div class="widget-toolbar">
+												<a href="#" data-action="settings">
+													<i class="icon-cog"></i>
+												</a>
+
+												<a href="#" data-action="reload">
+													<i class="icon-refresh"></i>
+												</a>
+
+												<a href="#" data-action="collapse">
+													<i class="icon-chevron-down"></i>
+												</a>
+
+												<a href="#" data-action="close">
+													<i class="icon-remove"></i>
+												</a>
+											</div>
+										</div>
+									<div class="widget-body">
+									<div class="widget-body-inner" style="display: none;">
+									<div class="widget-main">
 									<div class="infobox infobox-green  ">
 										<div class="infobox-icon">
 											<i class="icon-comments"></i>
@@ -742,8 +771,12 @@
 											</div>
 										</div>
 									</div>
+									</div>
+									</div>
+									</div>
+									</div>
 
-									<div class="space-6"></div>
+
 
 									
 								</div>
@@ -917,6 +950,9 @@
 		<script src="assets/js/fuelux/fuelux.tree.min.js"></script>
 		<script src="assets/js/jquery.sparkline.min.js"></script><!--显示柱形图标使用-->
 		<script src="assets/js/jquery.easy-pie-chart.min.js"></script><!--显示百分比图标使用-->
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+
 
 		<!--ace scripts-->
 
@@ -970,6 +1006,17 @@
 						animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
 						size: size});
 		});
+		
+		$('.widget-container-span').sortable({
+			        connectWith: '.widget-container-span',
+					items:'> .widget-box',
+					opacity:0.8,
+					revert:true,
+					forceHelperSize:true,
+					placeholder: 'widget-placeholder',
+					forcePlaceholderSize:true,
+					tolerance:'pointer'
+			    });
 
 
 
