@@ -574,7 +574,7 @@
 																	<div class="row-fluid">
 						
 
-														<textarea class="span5 limited" id="form-field-9" data-maxlength="50" maxlength="50" style="margin: 0px; width: 352px; height: 60px;"></textarea>
+														<textarea data-rel="tooltip" class="span5 limited" id="form-field-9" data-placement="right" data-original-title="对网站整体描述便于搜索引擎收录" data-maxlength="50" maxlength="50" placeholder="网站描述 ..." style="margin: 0px; "></textarea>
 													</div>
 																</div>
 															</div>
@@ -583,7 +583,7 @@
 																<label class="control-label" for="form-field-3">ICP备案号</label>
 
 																<div class="controls">
-																<input type="text" class="span5" id="form-field-3" placeholder="ICP备案号">
+																<input type="text" class="span5" id="form-field-3" data-rel="tooltip" data-original-title="ICP备案信息将放于网站的最下端" data-placement="right" placeholder="ICP备案号">
 																</div>
 															</div>
 															<div class="control-group">
@@ -743,11 +743,13 @@
 		<script type="text/javascript">
 			$(function(){
 
+			$('[data-rel=tooltip]').tooltip({container:'body'});
+
 			$('textarea[class*=limited]').each(function() {
 					var limit = parseInt($(this).attr('data-maxlength')) || 100;
 					$(this).inputlimiter({
 						"limit": limit,
-						remText: '%n 字符 剩余...',
+						remText: '%n 字符剩余 ...',
 						limitText: '最多支持 : %n.'
 					});
 				});
