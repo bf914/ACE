@@ -1,8 +1,7 @@
-/*! X-editable - v1.4.5 
+/*! X-editable - v1.5.1 
 * In-place editing with Twitter Bootstrap, jQuery UI or pure jQuery
 * http://github.com/vitalets/x-editable
 * Copyright (c) 2013 Vitaliy Potapov; Licensed MIT */
-
 .editableform {
     margin-bottom: 0; /* overwrites bootstrap margin */
 }
@@ -11,6 +10,14 @@
     margin-bottom: 0; /* overwrites bootstrap margin */
     white-space: nowrap; /* prevent wrapping buttons on new line */
     line-height: 20px; /* overwriting bootstrap line-height. See #133 */
+}
+
+/* 
+  BS3 width:1005 for inputs breaks editable form in popup 
+  See: https://github.com/vitalets/x-editable/issues/393
+*/
+.editableform .form-control {
+    width: auto;
 }
 
 .editable-buttons {
@@ -134,6 +141,10 @@
 .editable-clear-x:hover {
    opacity: 1;
 }
+
+.editable-pre-wrapped {
+   white-space: pre-wrap;
+}
 .editable-container.editable-popup {
     max-width: none !important; /* without this rule poshytip/tooltip does not stretch */
 }  
@@ -153,6 +164,7 @@
 
 .editable-container.ui-widget {
    font-size: inherit;  /* jqueryui widget font 1.1em too big, overwrite it */
+   z-index: 9990; /* should be less than select2 dropdown z-index to close dropdown first when click */
 }
 .editable-click, 
 a.editable-click, 
