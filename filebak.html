@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Treeview - Ace Admin</title>
+		<title>网站设置 - 2B龙 CMS</title>
 
 		<meta name="description" content="with selectable items(single &amp; multiple) and custom icons" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,8 +42,8 @@
 				<div class="container-fluid">
 					<a href="#" class="brand">
 						<small>
-							<i class="icon-leaf"></i>
-							Ace Admin
+							<i class="icon-thumbs-down"></i>
+							2B龙CMS
 						</small>
 					</a><!--/.brand-->
 
@@ -262,7 +262,7 @@
 								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									2B龙
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -272,14 +272,14 @@
 								<li>
 									<a href="#">
 										<i class="icon-cog"></i>
-										Settings
+										设置
 									</a>
 								</li>
 
 								<li>
 									<a href="#">
 										<i class="icon-user"></i>
-										Profile
+										个人信息
 									</a>
 								</li>
 
@@ -288,7 +288,7 @@
 								<li>
 									<a href="#">
 										<i class="icon-off"></i>
-										Logout
+										退出
 									</a>
 								</li>
 							</ul>
@@ -336,241 +336,163 @@
 
 				<ul class="nav nav-list">
 					<li>
-						<a href="index.html">
-							<i class="icon-dashboard"></i>
-							<span class="menu-text"> Dashboard </span>
+						<a href="admin.html">
+							<i class="icon-bar-chart"></i>
+							<span class="menu-text">基本信息</span>
 						</a>
 					</li>
-
+					
 					<li>
-						<a href="typography.html">
-							<i class="icon-text-width"></i>
-							<span class="menu-text"> Typography </span>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-folder-open-alt"></i>
+							<span class="menu-text"> 内容管理 </span>
+							
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						
+						<ul class="submenu">
+							<li>
+								<a href="#" class="dropdown-toggle">
+									<i class="icon-double-angle-right"></i>
+									文档模型
+									<b class="arrow icon-angle-down"></b>
+								</a>
+								
+								<ul class="submenu">
+									<li>
+										<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										我的文档
+										</a>
+										<li>
+										<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										草稿箱
+										</a>
+									</li>
+									<li>
+										<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										待审核
+										</a>
+									</li>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="elements.html">
+									<i class="icon-double-angle-right"></i>
+									文章列表
+								</a>
+							</li>
+							<li>
+								<a href="elements.html">
+									<i class="icon-double-angle-right"></i>
+									回收站
+								</a>
+							</li>
+						</ul>
+					</li>
+					
+					<li>
+						<a href="user.html">
+							<i class="icon-group"></i>
+							<span class="menu-text"> 用户管理 <span class="badge badge-primary "><i class="icon-arrow-up"></i>12</span>
+							
+							</span>
 						</a>
 					</li>
-
+					
+					<li>
+						<a href="pay.html">
+							<i class="icon-money"></i>
+							<span class="menu-text"> 支付方式 </span>
+						</a>
+					</li>
+					
 					<li class="active open">
 						<a href="#" class="dropdown-toggle">
-							<i class="icon-desktop"></i>
-							<span class="menu-text"> UI Elements </span>
+							<i class="icon-cogs"></i>
+							<span class="menu-text"> 系统设置 </span>
 
 							<b class="arrow icon-angle-down"></b>
 						</a>
 
 						<ul class="submenu">
-							<li>
-								<a href="elements.html">
+							<li class="">
+								<a href="siteset.html">
 									<i class="icon-double-angle-right"></i>
-									Elements
+									网站设置
 								</a>
 							</li>
 
 							<li>
 								<a href="buttons.html">
 									<i class="icon-double-angle-right"></i>
-									Buttons &amp; Icons
+									分类管理
 								</a>
 							</li>
 
-							<li class="active">
+							<li class="">
 								<a href="treeview.html">
 									<i class="icon-double-angle-right"></i>
-									Treeview
+									导航管理
+								</a>
+							</li>
+							<li>
+								<a href="treeview.html">
+									<i class="icon-double-angle-right"></i>
+									配置管理
+								</a>
+							</li>
+							<li>
+								<a href="treeview.html">
+									<i class="icon-double-angle-right"></i>
+									链接管理
 								</a>
 							</li>
 
-							<li>
+							<li class="active open">
 								<a href="#" class="dropdown-toggle">
 									<i class="icon-double-angle-right"></i>
 
-									Three Level Menu
+									备份还原
 									<b class="arrow icon-angle-down"></b>
 								</a>
 
 								<ul class="submenu">
-									<li>
+									<li class="">
 										<a href="#">
-											<i class="icon-leaf"></i>
-											Item #1
+											<i class="icon-download-alt"></i>
+											数据库备份
 										</a>
 									</li>
 
 									<li>
 										<a href="#" class="dropdown-toggle">
-											<i class="icon-pencil"></i>
-
-											4th level
-											<b class="arrow icon-angle-down"></b>
+											<i class="icon-upload-alt"></i>
+											数据库还原
 										</a>
+									</li>
+									
+									<li class="active">
+										<a href="#">
+											<i class="icon-cloud-download"></i>
+											文件备份
+										</a>
+									</li>
 
-										<ul class="submenu">
-											<li>
-												<a href="#">
-													<i class="icon-plus"></i>
-													Add Product
-												</a>
-											</li>
-
-											<li>
-												<a href="#">
-													<i class="icon-eye-open"></i>
-													View Products
-												</a>
-											</li>
-										</ul>
+									<li>
+										<a href="#" class="dropdown-toggle">
+											<i class="icon-cloud-upload"></i>
+											文件还原
+										</a>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
-
-					<li>
-						<a href="tables.html">
-							<i class="icon-list"></i>
-							<span class="menu-text"> Tables </span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#" class="dropdown-toggle">
-							<i class="icon-edit"></i>
-							<span class="menu-text"> Forms </span>
-
-							<b class="arrow icon-angle-down"></b>
-						</a>
-
-						<ul class="submenu">
-							<li>
-								<a href="form-elements.html">
-									<i class="icon-double-angle-right"></i>
-									Form Elements
-								</a>
-							</li>
-
-							<li>
-								<a href="form-wizard.html">
-									<i class="icon-double-angle-right"></i>
-									Wizard &amp; Validation
-								</a>
-							</li>
-
-							<li>
-								<a href="wysiwyg.html">
-									<i class="icon-double-angle-right"></i>
-									Wysiwyg &amp; Markdown
-								</a>
-							</li>
-						</ul>
-					</li>
-
-					<li>
-						<a href="widgets.html">
-							<i class="icon-list-alt"></i>
-							<span class="menu-text"> Widgets </span>
-						</a>
-					</li>
-
-					<li>
-						<a href="calendar.html">
-							<i class="icon-calendar"></i>
-
-							<span class="menu-text">
-								Calendar
-								<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
-									<i class="icon-warning-sign red bigger-130"></i>
-								</span>
-							</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="gallery.html">
-							<i class="icon-picture"></i>
-							<span class="menu-text"> Gallery </span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#" class="dropdown-toggle">
-							<i class="icon-tag"></i>
-							<span class="menu-text"> More Pages </span>
-
-							<b class="arrow icon-angle-down"></b>
-						</a>
-
-						<ul class="submenu">
-							<li>
-								<a href="profile.html">
-									<i class="icon-double-angle-right"></i>
-									User Profile
-								</a>
-							</li>
-
-							<li>
-								<a href="pricing.html">
-									<i class="icon-double-angle-right"></i>
-									Pricing Tables
-								</a>
-							</li>
-
-							<li>
-								<a href="invoice.html">
-									<i class="icon-double-angle-right"></i>
-									Invoice
-								</a>
-							</li>
-
-							<li>
-								<a href="login.html">
-									<i class="icon-double-angle-right"></i>
-									Login &amp; Register
-								</a>
-							</li>
-						</ul>
-					</li>
-
-					<li>
-						<a href="#" class="dropdown-toggle">
-							<i class="icon-file-alt"></i>
-
-							<span class="menu-text">
-								Other Pages
-								<span class="badge badge-primary ">4</span>
-							</span>
-
-							<b class="arrow icon-angle-down"></b>
-						</a>
-
-						<ul class="submenu">
-							<li>
-								<a href="error-404.html">
-									<i class="icon-double-angle-right"></i>
-									Error 404
-								</a>
-							</li>
-
-							<li>
-								<a href="error-500.html">
-									<i class="icon-double-angle-right"></i>
-									Error 500
-								</a>
-							</li>
-
-							<li>
-								<a href="grid.html">
-									<i class="icon-double-angle-right"></i>
-									Grid
-								</a>
-							</li>
-
-							<li>
-								<a href="blank.html">
-									<i class="icon-double-angle-right"></i>
-									Blank Page
-								</a>
-							</li>
-						</ul>
-					</li>
+		
 				</ul><!--/.nav-list-->
 
 				<div class="sidebar-collapse" id="sidebar-collapse">
@@ -583,27 +505,38 @@
 					<ul class="breadcrumb">
 						<li>
 							<i class="icon-home home-icon"></i>
-							<a href="#">Home</a>
+							<a href="#">主页</a>
 
 							<span class="divider">
 								<i class="icon-angle-right arrow-icon"></i>
 							</span>
 						</li>
-
+						
 						<li>
-							<a href="#">UI Elements</a>
+							
+							<a href="#">系统设置</a>
 
 							<span class="divider">
 								<i class="icon-angle-right arrow-icon"></i>
 							</span>
 						</li>
-						<li class="active">Treeview</li>
+						
+						<li>
+							
+							<a href="#">备份还原</a>
+
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+						
+						<li class="active">文件备份</li>
 					</ul><!--.breadcrumb-->
 
 					<div class="nav-search" id="nav-search">
 						<form class="form-search" />
 							<span class="input-icon">
-								<input type="text" placeholder="Search ..." class="input-small nav-search-input" id="nav-search-input" autocomplete="off" />
+								<input type="text" placeholder="搜索 ..." class="input-small nav-search-input" id="nav-search-input" autocomplete="off" />
 								<i class="icon-search nav-search-icon"></i>
 							</span>
 						</form>
@@ -613,10 +546,10 @@
 				<div class="page-content">
 					<div class="page-header position-relative">
 						<h1>
-							Treeview
+							文件备份
 							<small>
 								<i class="icon-double-angle-right"></i>
-								with selectable items(single &amp; multiple) and custom icons
+								备份服务器上的文件
 							</small>
 						</h1>
 					</div><!--/.page-header-->
@@ -625,22 +558,10 @@
 						<div class="span12">
 							<!--PAGE CONTENT BEGINS-->
 
-							<div class="row-fluid">
-								<div class="widget-box span6">
+							
+								<div class="widget-box span8">
 									<div class="widget-header header-color-blue2">
-										<h4 class="lighter smaller">Choose Categories</h4>
-									</div>
-
-									<div class="widget-body">
-										<div class="widget-main padding-8">
-											<div id="tree1" class="tree"></div>
-										</div>
-									</div>
-								</div>
-
-								<div class="widget-box span6">
-									<div class="widget-header header-color-green2">
-										<h4 class="lighter smaller">Browse Files</h4>
+										<h4 class="lighter smaller">选择想要备份的文件</h4>
 									</div>
 
 									<div class="widget-body">
@@ -649,7 +570,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+
 
 							<script type="text/javascript">
 								var $assets = "assets";//this will be used in fuelux.tree-sampledata.js
@@ -765,12 +686,13 @@
 
 		$('#tree2').ace_tree({
 			dataSource: treeDataSource2 ,
+			multiSelect:true,
 			loadingHTML:'<div class="tree-loading"><i class="icon-refresh icon-spin blue"></i></div>',
 			'open-icon' : 'icon-folder-open',
 			'close-icon' : 'icon-folder-close',
-			'selectable' : false,
-			'selected-icon' : null,
-			'unselected-icon' : null
+			'selectable' : true,
+			'selected-icon' : 'icon-ok',
+			'unselected-icon' : 'icon-remove'
 		});
 
 

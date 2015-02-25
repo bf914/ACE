@@ -27,7 +27,7 @@ DataSourceTree.prototype.data = function(options, callback) {
 };
 
 var tree_data = {
-	'for-sale' : {name: 'For Sale <button class="btn btn-minier btn-yellow">编辑</button>', type: 'folder'}	,
+	'for-sale' : {name: 'For Sale <a href="http://baidu.com" class="btn btn-minier btn-yellow pull-right">编辑</a>', type: 'folder'}	,
 	'vehicles' : {name: 'Vehicles', type: 'folder'}	,
 	'rentals' : {name: 'Rentals', type: 'folder'}	,
 	'real-estate' : {name: 'Real Estate', type: 'folder'}	,
