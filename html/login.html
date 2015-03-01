@@ -192,7 +192,7 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+															<input data-rel="popover" data-placement="left" title="" data-content="Warning! Best check yo self, you're not looking too good." data-original-title="<i class='ace-icon fa fa-exclamation-triangle orange'></i> Left Warning" type="email" class="form-control popover-warning" placeholder="Email" />
 															<i class="ace-icon fa fa-envelope"></i>
 														</span>
 													</label>
@@ -290,7 +290,9 @@
 <![endif]-->
 		<script type="text/javascript">
 			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+
 		</script>
+		<script src="../assets/js/bootstrap.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
@@ -303,7 +305,8 @@
 			 });
 			});
 			
-			
+			$('[data-rel=tooltip]').tooltip();
+			$('[data-rel=popover]').popover({html:true});
 			
 			//you don't need this, just used for changing background
 			jQuery(function($) {
