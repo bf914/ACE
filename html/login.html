@@ -192,14 +192,14 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input data-rel="popover" data-placement="left" title="" data-content="Warning! Best check yo self, you're not looking too good." data-original-title="<i class='ace-icon fa fa-exclamation-triangle orange'></i> Left Warning" type="email" class="form-control popover-warning" placeholder="Email" />
+															<input data-rel="popover" data-placement="left" data-trigger="focus" title="" data-content="注意!邮箱地址不合法." data-original-title="<i class='ace-icon fa fa-exclamation-triangle orange'></i> Left Warning" type="email" class="form-control popover-warning" placeholder="Email" />
 															<i class="ace-icon fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" placeholder="Username" data-toggle="tooltip" data-placement="right" title="" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
@@ -304,10 +304,23 @@
 				$(target).addClass('visible');//show target
 			 });
 			});
-			
+
 			$('[data-rel=tooltip]').tooltip();
 			$('[data-rel=popover]').popover({html:true});
-			
+
+			$('[placeholder=Username]').blur(function(){
+				var username=$(this).val();
+
+				$.get("get.php?username="+username,null,function(response){
+					//alert(response);
+					
+					$('[placeholder=Username]').attr("title" , response);
+					$('[placeholder=Username]').tooltip('show');
+				});
+				//$(this).attr("title" , "右侧提示,用户名已存在");
+				
+			});
+
 			//you don't need this, just used for changing background
 			jQuery(function($) {
 			 $('#btn-login-dark').on('click', function(e) {
